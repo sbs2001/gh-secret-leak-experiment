@@ -1,0 +1,15 @@
+name: github pages
+permissions:
+  contents: write
+on:
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Sample Step
+      run: |
+        echo "Hello" 
+      env:
+        SUPER_SECRET: ${{ secrets.SIGNING_STORE }}
