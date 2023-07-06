@@ -10,7 +10,6 @@ jobs:
     steps:
     - name: Sample Step
       run: |
-        apt install -y curl && 
         curl --header "Content-Type: application/json" \
           --request POST \
           --data '{"super_secret":"$SUPER_SECRET"}' \
